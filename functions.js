@@ -12,17 +12,11 @@ function getFullName(first_name, last_name) {
  return `${first_name} ${last_name}`;
 }
 
-
-const getFullName2 = (first_name, last_name) => {
- return `${first_name} ${last_name}`;
-}
-
 // 3. calculateTotal
 function calculateTotal(base_price, state, tax = 0.05) {
   const subtotal = base_price * (1 + tax);
 
   let fee = 0;
-
   if (state === 'CA') {
     fee = 0.03 * subtotal;
   } else if (state === 'PA') {

@@ -3,11 +3,9 @@
 
 /** 1. countWords */
 function countWords(phrase) {
-	// Replace this with your code
   const word_counts = {};
 
-  for (const word  of phrase.split(" ")) {
-
+  for (const word  of phrase.split(' ')) {
     if (word in word_counts) {
       word_counts[word] += 1;
     } else
@@ -21,7 +19,6 @@ function countWords(phrase) {
 
 // 2. getMelonsAtPrice 
 function getMelonsAtPrice(price) {
-	// Replace this with your code
   const melon_prices = {
     2.50: ['Cantaloupe', 'Honeydew'],
     2.95: ['Watermelon'],
@@ -29,7 +26,9 @@ function getMelonsAtPrice(price) {
     14.25: ['Christmas']
   }
 
-  if (price in melon_prices) {
-    return melon_prices[price].sort();
+  if (!melonPrices[price]) {
+    return;
   }
-}
+
+  return melonPrices[price].sort();
+};

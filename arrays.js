@@ -4,15 +4,14 @@
 /** 1. printIndices */
 const printIndices = (items) => {
   for (const idx in items) {
-    console.log(items[idx], idx);
+    console.log(`${items[idx]} ${idx}`);;
   }
 };
 
-console.log(printIndices(['apple', 'strawberry', 'cherry']));
+// console.log(printIndices(['apple', 'strawberry', 'cherry']));
 
 /** 2. everyOtherItem */
 const everyOtherItem = (items) => {
-
   const result = [];
 
   for (const idx in items) {
@@ -28,10 +27,10 @@ everyOtherItem(['apple', 'strawberry', 'cherry', 'banana', 'orange']);
 
 // * 3. smallestNItems
 const smallestNItems = (items, n ) => {
-  const sorted_items = items.sort((a, b) => a - b);
+  const sorted_items = items.sort((a, b) => a - b).slice(0, n);
 
 
-  console.log(sorted_items.slice(0,n));
+  console.log(sorted_items);
 };
 
 smallestNItems([1, 30, 4, 21, 100000], 3)
